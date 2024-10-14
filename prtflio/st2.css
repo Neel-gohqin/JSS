@@ -8,19 +8,19 @@ main{
     width: 100%;
     height: 80vh;
 }
-.Upboxset,.b2boxsec{
+.Upboxset,.b3boxsec{
     width: 100%;
     height: 46vh;
     background: linear-gradient(black 3px,white);
     padding: 10px;
 }
-.b2boxsec{
+.b3boxsec{
     width: 100%;
     border: 1px solid black;
     padding: 10px;
     background: linear-gradient(white,black);
 }
-.b2boxsec .notot{
+.b3boxsec .notot{
     display: flex;
     gap: 10px;
 }
