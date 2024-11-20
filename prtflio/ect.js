@@ -1,10 +1,39 @@
+
 var prevScrollpos = window.pageXOffset
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("navhad").style.top = "0";
   } else {
-    document.getElementById("navhad").style.top = "-60px";
+    document.getElementById("navhad").style.top = "-100px";
   }
   prevScrollpos = currentScrollPos;
+
 }
+
+window.addEventListener('scroll',()=>{
+  let scrolled = window.scrollY;
+  let sdb = document.getElementById("sdebox")
+
+  if (scrolled > 320) {
+    sdb.style.display = 'block';
+
+    setTimeout(() => {
+      sdb.style.height = '66vh'; 
+    }, 10);
+  } else {
+    sdb.style.height = '0vh'; 
+    setTimeout(() => {
+      sdb.style.display = 'none'; 
+    }, 500); 
+  }
+});
+
+
+
+
+
+
+
+
+

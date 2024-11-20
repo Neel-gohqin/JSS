@@ -1,38 +1,69 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap");
-*{
+
+:root {
+    --defaultBack1: linear-gradient(black 3px, rgb(87, 84, 84));
+    --defaultback2: linear-gradient(rgb(87, 84, 84), rgb(21, 21, 21));
+    --default-font: poppins;
+}
+
+body {
+    user-select: none;
+    height: 100vh;
+    user-select: none;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-main{
-    width: 100%;
-    height: 100vh;
-}
 
-
-header{
+header {
     width: 100%;
-    height: 10vh;
-    border: 1px solid #ffffff;
+    height: 14vh;
     position: sticky;
     top: 0px;
     background: black;
-    padding-top: 10px;
+    padding-top: 1rem;
+    z-index: 2;
 }
-header ul{
+
+header ul {
     width: 100%;
     height: auto;
     display: flex;
     justify-content: space-evenly;
     animation: drop 0.8s ease 1 normal;
+}
+
+.navdeg a {
+    text-decoration: none;
+    color: #000;
+}
+
+.linkNot img {
+    width: 34px;
+    height: 34px;
+}
+.navdeg a .lowttl{
+    position: relative;
+    top: -20px;
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+.navdeg a:hover .lowttl{
     
-  }
-ul > li{
+    transform: translateY(12px);
+    display: block;
+    opacity: 100%;
+}
+.navdeg>a li {
     font-size: 1rem;
     list-style: none;
     font-family: poppins;
     color: aliceblue;
-    transition: all 0.4s ;
+    transition: all 0.4s;
     /*
     background:linear-gradient(white , black);
     border-radius:14px;
@@ -40,66 +71,214 @@ ul > li{
     align-items: center;
     align-content: center;
     justify-content: center;
-    width: 112px;
-    height:36px;
+    width: auto;
+    height: auto;
     padding: 4px;
-    gap: 4px;
+    gap: 2px;
+    opacity: 70%;
+    display: flex;
+    flex-direction: column;
 }
 
 @keyframes drop {
     from {
         transform: translateY(-20px);
     }
+
     to {
         transform: translateY(10);
     }
-    
+
 }
 
 
-ul>li:hover{
-    color: rgb(248, 227, 201);
+.navdeg li:hover {
+    color: rgb(139, 133, 126);
     cursor: pointer;
     transform: scale(1.2);
-    opacity: 50%;
+    opacity: 100%;
 
 }
 
-.Upboxset,.b3boxsec{
+
+.Upboxsetstart {
     width: 100%;
+    height: 180vh;
+    background: linear-gradient(black 3px, rgb(87, 84, 84));
+    padding: 10px;
+    display: flex;
+
+}
+
+.seclft {
+    width: 50%;
+}
+
+.secrght {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.phtbox {
+    padding: 14px 0px 10px 8px;
+}
+
+.sidewidow {
+    background-color: #c2eb47;
+    transform: rotateZ(90deg);
+    position: relative;
+    left: 78px;
+    width: 20vw;
+    height: 0vh;
+    display: none;
+    border-radius: 70px 70px 0px 0px;
+    transition: height 0.8s ease, display 0.8s ease;
+}
+
+.roundoc img {
+    width: 21vw;
+    height: 40vh;
+    border-radius: 50%;
+}
+
+.roundoc {
+    width: 21vw;
+    height: 40vh;
+    border-radius: 50%;
+    animation: poping 0.8s ease 1 normal;
+    background: linear-gradient(rgb(72, 38, 38)50%, black 10%);
+    position: relative;
+}
+
+.greetWlcm {
+    width: 46vw;
+    height: auto;
+    font-family: var(--default-font);
+    position: relative;
+    top: 6rem;
+}
+
+.greetWlcm h1 {
+    font-size: 3rem;
+    color: rgb(113, 112, 112);
+}
+
+.greetWlcm h1>strong {
+    color: rgb(199, 196, 190);
+}
+
+@keyframes ttch {}
+
+.greetWlcm span {
+    color: wheat;
+    font-size: 1.3rem;
+}
+
+@keyframes poping {
+    from {
+        transform: scale(0.1);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.stactdet {
+    width: 100%;
+    height: 24vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 28px;
+}
+
+.stactdet h1 {
+    font-size: 2.6rem;
+    color: #8f8c8c;
+    font-family: poppins;
+}
+
+.stactdet hr {
+    width: 90%;
+    height: 0.2vh;
+    animation: animmfont 0.8s ease 1 normal;
+}
+
+@keyframes animmfont {
+    0% {
+        width: 0;
+
+    }
+
+    100% {
+        width: 100%;
+    }
+
+}
+
+.b2boxsec {
     height: 82vh;
-    background: linear-gradient(black 3px,white);
-    padding: 10px;
-    border: 1px solid #fa1313;
+    padding: 20px 20px 20px 20px;
+    background: linear-gradient(rgb(87, 84, 84), rgb(43, 43, 43));
 }
-.b3boxsec{
-    width: 100%;
-    padding: 10px;
-    background: linear-gradient(white,black);
-}
-.b3boxsec .notot{
+
+.boxsec .notot {
     /* display: flex;
-    justify-content: space-around;
     flex-shrink: 3;
     gap: 10px; */
     display: grid;
-    justify-content: space-around;
-    grid-template-columns: 360px 360px 360px;
-    grid-template-rows: 250px 250px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 200px;
+    grid-template-rows: 250px;
+    justify-items: center;
+    row-gap: 34px;
+    align-items: center;
 }
-.notot .bitem{
-    width: 26vw;    
-    height: 32vh;
+
+.notot .bitem {
+    width: 32vw;
+    height: 34vh;
     text-align: center;
-    padding: 6px; 
+    padding: 16px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    gap: 42px;
     border-radius: 12px;
-    background: linear-gradient(rgb(177, 159, 159),black);
+    /* background: linear-gradient(rgb(177, 159, 159),black); */
+    background-color: transparent;
+    outline: none;
+    border: 0.5px solid #353232;
+    box-shadow: 2px 4px 28px 5px;
 }
 
-.notot span,p{
+/* 
+.bitem3{
+    width: 40vw;    
+    height: 34vh;
+    text-align: center;
+    padding: 16px; 
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 44px;
+    border-radius: 12px;
+    background-color: transparent;
+    outline: none;
+    border: 0.5px solid #353232;
+    box-shadow: 2px 4px  28px 5px;
+} */
+/* background: linear-gradient(rgb(177, 159, 159),black); */
+
+
+
+.notot span,
+p {
     width: 100%;
     height: 45%;
     font-family: poppins;
@@ -107,42 +286,105 @@ ul>li:hover{
     border-radius: 8px;
 }
 
-.notot span a> img{
-    width: 28px;
-    height: 28px;
-    position:absolute;
-    left: 38px;
-    opacity: 80%;
-}
-
-.notot img{
-    width:5vw;
-    height: 11vh;
-}
-.roundoc img{
-    width: 21vw;
-    height: 40vh;
-    border-radius: 50%;
-}
-.roundoc {
-    width:21vw;
-    height: 40vh;
-    border-radius: 50%;
-    animation: poping 0.8s ease 1 normal;
-    background: linear-gradient(rgb(72, 38, 38)50%, black 10%);
+.infcc strong {
+    color: rgb(104, 98, 98);
+    text-decoration: none;
+    font-weight: 400;
 
 }
 
-@keyframes poping {
-    from {
-        transform: scale(0.1);
-    }
-    to {
-        transform: scale(1);
-    }
+.infcc img {
+    transition: transform 0.3s ease;
 }
-.startB{
-display: flex;
-flex-direction: column;
-justify-content: center;
+
+.infcc img:hover {
+    transform: scale(1.2);
+
 }
+
+.notot span a {
+    text-decoration: none;
+}
+
+.bitem h2 {
+    font-size: 1.1rem;
+    color: #101010;
+    font-weight: 450;
+    font-family: poppins;
+    position: relative;
+    top: 5px;
+}
+
+.bitem3 h2 {
+    font-size: 1.1rem;
+    color: #070707;
+    font-weight: 450;
+    font-family: poppins;
+    position: relative;
+    top: 5px;
+    text-wrap: nowrap;
+}
+
+.bitem span {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.bitem3 span {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    border: 1px solid #000;
+    gap: 30px;
+    justify-content: center;
+}
+
+.notot img {
+    width: 4.5vw;
+    height: 9vh;
+    padding: 5px;
+}
+
+
+.Trd3sec {
+    border: 1px solid #b6b6b6;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgb(43, 43, 43), rgb(77, 76, 76));
+    padding: 12px;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    align-items: center;
+    flex-direction: column;
+}
+.footsecst h1{
+    font-size: 2.2rem;
+    color: #151515;
+}
+.footsecst p{
+    font-size: 1rem;
+    color: rgb(15, 15, 15);
+}
+.footsecst{
+    background-color: rgb(71, 68, 68);
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 6px;
+    width: 95%;
+    height: 22vh;
+    border-radius: 20px;
+    font-family: poppins;
+}
+.footlist a{
+    text-decoration: none;
+    color: rgb(218, 2, 2);
+}
+.footlist {
+    display: flex;
+    text-decoration: none;
+    gap: 20px;
+}
+
