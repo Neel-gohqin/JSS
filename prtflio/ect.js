@@ -1,11 +1,12 @@
 
-var prevScrollpos = window.pageXOffset
+var prevScrollpos = window.scroll
 window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
+  var currentScrollPos = window.scrollY;
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("navhad").style.top = "0";
   } else {
-    document.getElementById("navhad").style.top = "-100px";
+    document.getElementById("navhad").style.background="black opacity=20%";
+    document.getElementById("navhad").style.top = "-340px";
   }
   prevScrollpos = currentScrollPos;
 
