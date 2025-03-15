@@ -18,9 +18,6 @@ body {
 }
 
 
-#navhad {
-    transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out
-}  
 main{
     background-color: black;
 }
@@ -33,14 +30,20 @@ header {
     padding-top: 1.2rem;
     z-index: 2;
 }
+
+#navhad {
+    transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out
+}  
 .icon{
     display: none;
     font-size: 1.2rem;
-    color: #9e9595;
     font-family: var(--default-font2);
-    padding-left: 36px;
+    padding-left: 38px;
 }
-
+.icon h1{
+    color: #9e9595;
+    font-weight: 520;
+}
 header ul {
     width: 100%;
     height: auto;
@@ -48,19 +51,15 @@ header ul {
     justify-content: space-evenly;
     animation: drop 0.8s ease 1 normal;
 }
-
 .navdeg a {
     text-decoration: none;
     color: #000;
     list-style: none;
 }
-
-
 .linkNot img {
     width: 32px;
     height: 32px;
 }
-
 .navdeg a .lowttl {
     position: relative;
     top: -20px;
@@ -68,9 +67,7 @@ header ul {
     opacity: 0;
     transition: all 0.6s ease;
 }
-
 .navdeg a:hover .lowttl {
-
     transform: translateY(12px);
     display: block;
     opacity: 100%;
@@ -108,13 +105,11 @@ header ul {
 
 }
 
-
 .navdeg li:hover {
     color: rgb(139, 133, 126);
     cursor: pointer;
     transform: scale(1.2);
     opacity: 100%;
-
 }
 
 .boxMainIn {
@@ -134,20 +129,17 @@ header ul {
     padding: 20px;
     margin-bottom: 48px;
     display: flex;
-
 }
-
 
 .abboutpr {
     width: 100%;
     height: auto;
     padding: 60px;
     text-align: justify;
-
 }
 
 .abboutpr h1 {
-    font-size: 3.2rem;
+    font-size: 2.4rem;
     padding-left: 10px;
     right: 10px;
     font-family: var(--default-font2);
@@ -159,7 +151,7 @@ header ul {
 }
 
 .abboutpr p {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     font-weight: 400;
     line-height: 28px;
     padding: 16px 0px 0px 0px;
@@ -197,6 +189,8 @@ header ul {
     display: flex;
     list-style: none;
     padding-top: 6px;
+    opacity: 0;
+    transition: opacity 1s ease;
 }
 
 .linksacc .linkaccll img {
@@ -211,7 +205,18 @@ header ul {
     list-style: none;
 
 }
-
+.h2up{
+    z-index: 0;
+    opacity: 1;
+    transform: translateX(0px);
+    transition: transform 0.8s ease, opacity 0.8s ease;
+}
+.showh2lnk{
+    z-index: 0;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+    opacity: 0;
+    transform: translateX(-700px);
+}
 .phtbox {
     padding: 14px 0px 0px 14px;
     position: relative;
@@ -242,7 +247,7 @@ header ul {
     width: 28vw;
     height: 56vh;
     border-radius: 50%;
-    animation: poping 0.8s ease 1 normal;
+    animation: poping 1s ease 1 normal;
     background: linear-gradient(rgb(72, 38, 38)50%, black 10%);
     position: relative;
 }
@@ -269,6 +274,8 @@ header ul {
     font-size: 5rem;
     color: rgb(113, 112, 112);
     line-height: 5.6rem;
+    opacity: 0;
+    transition: opacity 1s ease-in;
 }
 
 .greetWlcm h1>span {
@@ -296,7 +303,7 @@ header ul {
 
 
 .midsec2{
-    padding: 0px 60px 60px 60px;
+    padding: 16px 60px 60px 60px;
     background: linear-gradient(  #1F1E1E ,black 350px);
     
 }
@@ -304,33 +311,31 @@ header ul {
     width: 100%;
     height: auto;
 }
+
+
 .exp{
-    padding-top: 80px;
     width: 100%;
     height: auto;
-    font-family: var(--default-font2);
-    
+    font-family: var(--default-font2);    
 }
+
 .exp2{
     padding-top: 40px;
 }
 .exp3{
+
     width: 100%;
-    padding-top: 145px;
+    padding-top: 120px;
     height: auto;
 }
- /* .exp3inner{
-    display: flex;
-    align-items: center;
-} */
+
 .exp3 span{
 height: 50vh;
 }
-/* .exp3cgg{
-    display: flex;
-flex-direction: column;
-align-items: flex-end;
-}  */
+#allhead {
+    transition: opacity 0.6s ease-in-out; /* Smooth transition for opacity */
+  }
+
 .exp4Prjct h1{
     text-align: right;
     font-size: 44rem;
@@ -339,27 +344,34 @@ align-items: flex-end;
 
     width: 100%;
     height: auto;
-    border: 1px solid #000;
         display: grid; 
         grid-template-columns: 0.8fr 0.8fr; /* 2 columns, each taking equal space */
         grid-template-rows: 1fr 1fr; /* 2 rows, each taking equal space */    
         align-items: center;
         justify-items: center;
-        padding: 6px;
-        gap: 8px;
+        gap: 30px;
     }
-.pjinbx .pjbx{
+.pjinbx .pjbx{    
     width: 100%;
-    height: 700px;
+    height: 650px;
     border-radius: 12px;
+    padding: 8px;
     border: 1px solid #868484;
+    opacity: 100%;
+    transition: opacity 1s ease ;
 }
-
+.pjbxHidden{
+    opacity: 0;
+}
 .pjcoverbx{
-    border: 1px solid #868484;
     width: 100%;
-    height: 64vh;
+    height: 54vh;
     border-radius: 12px;
+    padding:8px;
+    /* background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(assets/sccPj.png); */
 }
 .pjcoverbx img {
     border-radius: 12px;
@@ -369,57 +381,89 @@ align-items: flex-end;
 .pjbx .dtlpj{
     width: 100%;
     height: auto;
-    padding-top: 12px;
+    padding-top: 16px;
     font-family: var(--default-font2);
 }
 .dtlpj .dttlpjc{
-    padding: 22px 22px 22px 4px ;
+    padding: 20px 12px 22px 12px ;
     width: 100%;
     height: auto;
-    border: 1px solid #fafafa;
-
+    text-align: justify;
+}
+.dttlpjc p{
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 26px;
+    font-family: var(--default-font2);
+    color: rgb(199, 196, 190);
+}
+.repll{
+    padding: 10px 0px 0px 0px;
+}
+.repll a{
+    color: rgb(243, 243, 243);
+    
 }
 .dtlpj h1{
-    font-size: 1.8rem;
+    font-size: 1.3rem;
+    font-weight: 580;
     text-align: left;
     color: rgb(243, 243, 243);
-    padding: 4px;
+    padding: 0px 12px 0px 12px;
+}
+.dtlpj .rplnk{
+    
+    width: 100%;
+    height: auto;
+    padding: 14px 12px 14px 12px;
+}
+.rplnk span{
+    background-color: #0e0e0e;
+    color: rgb(217, 206, 206);
+    border-radius: 16px;
+    padding: 8px 12px 8px 12px;
 }
 .exp >h1{
-    font-size: 3.2rem;
+    font-size: 2.4rem;
     font-weight: 530;  
     padding-bottom: 48px;
     color: rgb(243, 243, 243);
 }
 .exp span h1{
-    font-size: 1.6rem;
-    padding-bottom: 10px;
+    font-size: 1.3rem;
+    font-weight: 530;  
+    padding-bottom: 14px;
     color: rgb(243, 243, 243);
 }
 .exp h2{
     font-weight: 400;  
-    font-size: 1.3rem;
-    padding-bottom: 12px;
+    font-size: 1rem;
+    padding-bottom: 6px;
     color: rgb(243, 243, 243);
 }
+.exp4Prjct{
+    border: 1px solid #000;
+    padding-top: 70px;
+
+}
 .exp p{
-    padding-bottom: 12px;
-    font-size: 1.3rem;
+    padding-bottom: 6px;
+    font-size: 1rem;
     font-weight: 400;
     color: rgb(243, 243, 243);
 }
 .exp span a{
-    text-decoration: underline rgb(0, 0, 0);
+    text-decoration: underline rgb(143, 140, 140);
     color: rgb(243, 243, 243);
 }
 .explistdetl ul{
     list-style-position: inside;
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 400;
 }
 .explistdetl li{
     color: rgb(243, 243, 243);
-    padding: 12px 0px 0px 0px;
+    padding: 6px 0px 0px 0px;
 }
 .stactdet {
     width: 100%;
